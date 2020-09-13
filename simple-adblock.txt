@@ -1,0 +1,77 @@
+---ssh---
+ssh -oKexAlgorithms=+diffie-hellman-group1-sha1 root@192.168.1.1
+
+---bin path---
+/etc/init.d/simple-adblock reload | show | stop
+
+---config file path---
+/etc/config/simple-adblock
+
+---old---
+config simple-adblock 'config'
+	option config_update_enabled '0'
+	option dns 'dnsmasq.servers'
+	option dns_instance '0'
+	option verbosity '2'
+	option force_dns '1'
+	option led 'none'
+	option boot_delay '120'
+	option download_timeout '10'
+	option curl_retry '3'
+	option parallel_downloads '1'
+	option debug '0'
+	option compressed_cache '0'
+	list allowed_domain 'cdn.jsdelivr.net'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt'
+	list blocked_domains_url 'https://cdn.jsdelivr.net/gh/paulgb/BarbBlock/blacklists/domain-list.txt'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt'
+	list blocked_hosts_url 'https://adaway.org/hosts.txt'
+	list blocked_hosts_url 'https://cdn.jsdelivr.net/gh/hoshsadiq/adblock-nocoin-list/hosts.txt'
+	list blocked_hosts_url 'https://www.malwaredomainlist.com/hostslist/hosts.txt'
+	list blocked_hosts_url 'https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
+	list blocked_hosts_url 'http://winhelp2002.mvps.org/hosts.txt'
+	list blocked_hosts_url 'https://someonewhocares.org/hosts/hosts'
+	option enabled '1'
+
+--- new ---
+config simple-adblock 'config'
+	option config_update_enabled '0'
+	option dns 'dnsmasq.servers'
+	option dns_instance '0'
+	option verbosity '2'
+	option force_dns '1'
+	option led 'none'
+	option boot_delay '120'
+	option download_timeout '10'
+	option curl_retry '3'
+	option parallel_downloads '1'
+	option debug '0'
+	option compressed_cache '0'
+	list allowed_domain 'posteid.poste.it'
+	list allowed_domain 'googleadservices.com'
+	list allowed_domain 'clickserve.dartsearch.net'
+	list allowed_domain 'doubleclick.net'
+	list allowed_domain 'tradetracker.net'
+	list allowed_domain 'atdmt.com'
+
+	list blocked_domain 'apps.liamcottle.com'
+
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt'
+	list blocked_domains_url 'https://cdn.jsdelivr.net/gh/paulgb/BarbBlock/blacklists/domain-list.txt'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt'
+	list blocked_domains_url 'https://mirror1.malwaredomains.com/files/justdomains'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt'
+	list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt'
+	list blocked_domains_usl 'https://easylist.to/easylist/easylist.txt'
+
+	list blocked_hosts_url 'https://adaway.org/hosts.txt'
+	list blocked_hosts_url 'https://cdn.jsdelivr.net/gh/hoshsadiq/adblock-nocoin-list/hosts.txt'
+	list blocked_hosts_url 'https://www.malwaredomainlist.com/hostslist/hosts.txt'
+	list blocked_hosts_url 'https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
+	list blocked_hosts_url 'http://winhelp2002.mvps.org/hosts.txt'
+	list blocked_hosts_url 'https://someonewhocares.org/hosts/hosts'
+	list blocked_hosts_url 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
+	
+	option enabled '1'
