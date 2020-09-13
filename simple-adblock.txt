@@ -53,10 +53,13 @@ config simple-adblock 'config'
 
         list blocked_domains_url 'https://raw.githubusercontent.com/paulbertoli94/adblock/master/personal_blocked_domains_url.txt'
 
-        list blocked_domains_url 'https://easylist.to/easylist/easylist.txt'
-        list blocked_domains_url 'https://easylist.to/easylist/easyprivacy.txt'
-        list blocked_domains_url 'https://easylist-downloads.adblockplus.org/easylistitaly.txt'
-        blocked_domains_url 'https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts;showintro=0&useip='
+        list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_tracking.txt'
+        list blocked_domains_url 'https://cdn.jsdelivr.net/gh/paulgb/BarbBlock/blacklists/domain-list.txt'
+        list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_ad.txt'
+        list blocked_domains_url 'https://s3.amazonaws.com/lists.disconnect.me/simple_malvertising.txt'
+        list blocked_domains_url 'https://mirror1.malwaredomains.com/files/justdomains'
+        list blocked_domains_url 'https://v.firebog.net/hosts/Easylist.txt'
+        list blocked_domains_url 'https://dbl.oisd.nl/light/'
 
         list blocked_hosts_url 'https://adaway.org/hosts.txt'
         list blocked_hosts_url 'https://cdn.jsdelivr.net/gh/hoshsadiq/adblock-nocoin-list/hosts.txt'
@@ -64,5 +67,7 @@ config simple-adblock 'config'
         list blocked_hosts_url 'https://pgl.yoyo.org/as/serverlist.php?hostformat=hosts&showintro=1&mimetype=plaintext'
         list blocked_hosts_url 'http://winhelp2002.mvps.org/hosts.txt'
         list blocked_hosts_url 'https://someonewhocares.org/hosts/hosts'
+        list blocked_hosts_url 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts'
+        list blocked_hosts_url 'https://hosts.oisd.nl/light/
 
         option enabled '1'
